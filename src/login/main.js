@@ -9,7 +9,7 @@ FORM.addEventListener('submit', function (event) {
 
   if (username === '1234' && password === '1234') {
     clearInputs();
-    window.location.assign("http://" + window.location.host + '/src' + "/home");
+    window.location.assign(window.location.origin + '/src' + "/home");
   } else {
     clearInputs();
     document.getElementById('error-message').innerText = 'Invalid username or password.';
