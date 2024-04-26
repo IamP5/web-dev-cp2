@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url(https://i1.wp.com/www.wine.com.br/winepedia/wp-content/uploads/2022/06/sociedade_da_mesa_vinhos_clube_de_vinhos_revista_tudo_sobre_o_vinho_tinto.jpg);
+  fill-opacity: 50%;
+}
+
+.login-container {
+  width: 24%;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+label {
+  text-align: left;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type='text'],
+input[type='password'] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#error-message {
+  color: red;
+  margin-top: 10px;
+}
