@@ -1,9 +1,14 @@
 const SELECTED_WINE = JSON.parse(localStorage.getItem('selected-wine'));
+const RECIPES = JSON.parse(localStorage.getItem('recipes'));
 const WINE_ELEMENT = document.getElementById('selected-wine');
+const RECIPES_ELEMENT = document.getElementById('recipes');
 
-let wishList = JSON.parse(localStorage.getItem('wish-list')) || [];
+let wishList = JSON.parse(localStorage.getItem('wish-list'));
+
 
 if (SELECTED_WINE) {
+  const recipesForSelectedWine = RECIPES.find(recipe => recipe.wineType === SELECTED_WINE.tipo).recipes;
+
   WINE_ELEMENT.innerHTML = `
     <img src="https://via.placeholder.com/400x600" alt="Wine image" class="wine-card__image">
     <div class="wine-card">
@@ -15,6 +20,15 @@ if (SELECTED_WINE) {
       <button class="wine-card__wishlist-btn" onclick="addToWishList()">Add to Wishlist</button>
     </div>
   `;
+
+  recipesForSelectedWine.forEach(recipe => {
+    RECIPES_ELEMENT.innerHTML += `
+      <div class="recipe-card">
+        <h3 class="recipe-card__name">${recipe.name}</h3>
+        <p class="recipe-card__description">${recipe.description}</p>
+      </div>
+    `;
+  });
 } else {
   WINE_ELEMENT.innerHTML = '<p>Vinho não encontrado</p>';
 }

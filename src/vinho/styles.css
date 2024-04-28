@@ -1,6 +1,8 @@
 main {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rem;
   padding: 6rem 4rem;
 }
 
@@ -41,4 +43,33 @@ main {
 .wine-card__not-found {
   color: red;
   font-size: 20px;
+}
+
+#recipes {
+  max-width: 1280px;
+  display: flex;
+  gap: 20px;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.recipe-card__name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.recipe-card__description {
+  font-size: 16px;
+  color: #666;
+}
+
+ul {
+  padding: 0;
 }

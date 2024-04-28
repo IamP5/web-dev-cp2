@@ -9,6 +9,7 @@ if (maiorDeIdade) {
 setupWines();
 setupWishList();
 setupCart();
+setupRecipes();
 
 function setupWines() {
   let storedWines = JSON.parse(localStorage.getItem('wines'));
@@ -74,4 +75,61 @@ function setupCart() {
   }
 
   localStorage.setItem('cart', JSON.stringify(storedCart));
+}
+
+function setupRecipes() {
+  let storedRecipes = JSON.parse(localStorage.getItem('recipes'));
+
+  if (!storedRecipes) {
+    storedRecipes = [
+      {
+        "wineType": "Branco",
+        "recipes": [
+          {
+            "name": "Camarão ao Alho e Óleo",
+            "ingredients": ["camarão", "alho", "azeite de oliva", "salsinha", "sal", "pimenta"],
+            "preparation": "Refogue o alho no azeite, adicione os camarões e tempere. Cozinhe até dourar e finalize com salsinha.",
+            "description": "Um prato simples, mas cheio de sabor, que combina perfeitamente com a acidez crocante de um vinho branco, realçando os sabores delicados do camarão."
+          },
+          {
+            "name": "Salada de Frango com Manga",
+            "ingredients": ["peito de frango", "manga", "folhas verdes", "vinagrete"],
+            "preparation": "Grelhe o frango e corte em tiras. Misture com manga picada e folhas verdes. Tempere com vinagrete.",
+            "description": "A doçura da manga e o sabor do frango grelhado complementam as notas frutadas de um vinho branco, resultando em uma refeição refrescante."
+          },
+          {
+            "name": "Risoto de Limão Siciliano",
+            "ingredients": ["arroz arbório", "caldo de legumes", "limão siciliano", "queijo parmesão", "manteiga", "vinho branco"],
+            "preparation": "Refogue o arroz no vinho branco, adicione o caldo gradualmente. Incorpore raspas de limão e finalize com parmesão e manteiga.",
+            "description": "Este cremoso risoto com um sabor marcante de limão combina maravilhosamente com um vinho branco encorpado, equilibrando a riqueza do prato."
+          }
+        ]
+      },
+      {
+        "wineType": "Tinto",
+        "recipes": [
+          {
+            "name": "Bife de Chorizo",
+            "ingredients": ["bife de chorizo", "sal grosso", "pimenta do reino"],
+            "preparation": "Tempere o bife com sal e pimenta. Grelhe até o ponto desejado.",
+            "description": "Os sabores robustos do bife de chorizo são realçados pela estrutura tânica de um vinho tinto, proporcionando uma experiência gastronômica intensa."
+          },
+          {
+            "name": "Massa ao Molho de Trufas",
+            "ingredients": ["massa de sua escolha", "trufas negras", "creme de leite", "manteiga", "queijo parmesão"],
+            "preparation": "Cozinhe a massa al dente. Em uma panela, derreta a manteiga, adicione o creme de leite e as trufas raladas. Misture a massa e finalize com parmesão.",
+            "description": "Um prato luxuoso que requer um vinho tinto igualmente sofisticado para complementar os sabores ricos e terrosos das trufas."
+          },
+          {
+            "name": "Ragu de Cordeiro",
+            "ingredients": ["cordeiro desfiado", "tomates pelados", "vinho tinto", "cebola", "alho", "cenoura", "alecrim"],
+            "preparation": "Refogue a cebola e o alho, adicione o cordeiro e o vinho tinto. Incorpore os tomates e a cenoura. Cozinhe lentamente e adicione o alecrim.",
+            "description": "Os sabores profundos e saborosos do ragu de cordeiro combinam perfeitamente com um vinho tinto encorpado, realçando tanto a refeição quanto o vinho."
+          }
+        ]
+      }
+    ]
+
+    localStorage.setItem('recipes', JSON.stringify(storedRecipes));
+  }
 }
