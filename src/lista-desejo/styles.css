@@ -1,0 +1,87 @@
+main {
+  padding: 20px 60px;
+}
+
+.vinhos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.vinho {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5e6ca;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+}
+
+.vinho__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.vinho__image {
+  /* Add your styles for the image here */
+}
+
+.vinho__info {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+.vinho__name {
+  font-size: 1.25rem;
+}
+
+.vinho__type {
+  font-size: 1rem;
+}
+
+.vinho__price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-top: 8px;
+}
+
+.vinho__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.vinho__button {
+  font-size: 1rem;
+  cursor: pointer;
+  transition: ease 0.3s;
+  border: none;
+}
+
+.vinho__button--cart {
+  background-color: #6d0d0d;
+  color: #f5e6ca;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.vinho__button--wishlist {
+  width: 40 px;
+  height: 40px;
+  background-color: transparent;
+  transition: ease 0.3s;
+}
+
+.vinho__button--wishlist-active {
+  filter: invert(50%) sepia(100%) saturate(100%) hue-rotate(300deg)
+    brightness(50%) contrast(100%);
+}
+
+.vinho__button--wishlist:hover {
+  scale: 1.16;
+}
