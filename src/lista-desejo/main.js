@@ -1,8 +1,10 @@
 LISTA_VINHOS = document.getElementById('lista-vinhos');
+NAV_CART = document.getElementById('nav-cart');
 
 let wishList = JSON.parse(localStorage.getItem('wish-list'));
 
 createElements();
+updateCartPrice();
 
 function createElements() {
   LISTA_VINHOS.innerHTML = '';
@@ -35,6 +37,18 @@ function createElements() {
   });
 }
 
+function updateCartPrice() {
+  const CART = JSON.parse(localStorage.getItem('cart'));
+
+  if (NAV_CART.children.length > 1) {
+    NAV_CART.removeChild(NAV_CART.lastElementChild);
+  }
+
+  NAV_CART.innerHTML += `
+    <span>R$ ${CART.price}</span>
+ `
+}
+
 function addToCart(id) {
   const vinho = wishList.find(vinho => vinho.id == id);
 
@@ -44,6 +58,7 @@ function addToCart(id) {
   storedCart.price += vinho.preco;
 
   localStorage.setItem('cart', JSON.stringify(storedCart));
+  updateCartPrice();
 }
 
 function removeFromWishList(id) {

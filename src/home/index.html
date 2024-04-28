@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="../styles.css" />
-    <script src="../shared/shared.js" defer></script>
     <script src="main.js" defer></script>
     <title>Home</title>
   </head>
@@ -14,9 +13,18 @@
       <h1>Vinheria Agnello</h1>
       <nav>
         <ul>
-          <li><a href="#vinhos">Vinhos</a></li>
-          <li><a href="#desejo">Lista de desejo</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="/src/home">Vinhos</a></li>
+          <li><a href="/src/lista-desejo">Lista de desejo</a></li>
+          <li><a href="/src/contato">Contato</a></li>
+          <li>
+            <a id="nav-cart" href="/src/carrinho">
+              <img
+                width="40"
+                src="../assets/cart.svg"
+                alt="Carrinho de compras"
+              />
+            </a>
+          </li>
         </ul>
       </nav>
     </header>

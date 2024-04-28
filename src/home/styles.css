@@ -25,8 +25,8 @@ main {
   gap: 1rem;
 }
 
-.vinho__image {
-  /* Add your styles for the image here */
+.vinho__image:hover {
+  cursor: pointer;
 }
 
 .vinho__info {

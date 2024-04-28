@@ -2,9 +2,12 @@ const SELECTED_WINE = JSON.parse(localStorage.getItem('selected-wine'));
 const RECIPES = JSON.parse(localStorage.getItem('recipes'));
 const WINE_ELEMENT = document.getElementById('selected-wine');
 const RECIPES_ELEMENT = document.getElementById('recipes');
+const NAV_CART = document.getElementById('nav-cart');
 
 let wishList = JSON.parse(localStorage.getItem('wish-list'));
 let cart = JSON.parse(localStorage.getItem('cart'));
+
+updateCartPrice();
 
 if (SELECTED_WINE) {
   const recipesForSelectedWine = RECIPES.find(recipe => recipe.wineType === SELECTED_WINE.tipo).recipes;
@@ -33,6 +36,18 @@ if (SELECTED_WINE) {
   WINE_ELEMENT.innerHTML = '<p>Vinho não encontrado</p>';
 }
 
+function updateCartPrice() {
+  const CART = JSON.parse(localStorage.getItem('cart'));
+
+  if (NAV_CART.children.length > 1) {
+    NAV_CART.removeChild(NAV_CART.lastElementChild);
+  }
+
+  NAV_CART.innerHTML += `
+    <span>R$ ${CART.price}</span>
+  `
+}
+
 function addToCart() {
   cart.items.push(SELECTED_WINE);
   cart.price += SELECTED_WINE.preco;
@@ -40,6 +55,7 @@ function addToCart() {
   localStorage.setItem('cart', JSON.stringify(cart));
 
   alert('Produto adicionado ao carrinho!');
+  updateCartPrice();
 }
 
 function addToWishList() {
