@@ -1,4 +1,7 @@
-let carrinho = [];
+let carrinho = {
+  itens: [],
+  preco: 0,
+};
 
 const vinhos = [
   { id: 1, nome: "Chardonnay", tipo: "Branco", preco: 50 },
@@ -38,4 +41,4 @@ const vinhos = [
   { id: 35, nome: "Trebbiano", tipo: "Branco", preco: 40 },
 ];
 
-const listaDeDesejos = [];
+let listaDeDesejos = [];
