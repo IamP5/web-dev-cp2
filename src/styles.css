@@ -1,0 +1,46 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #6d0d0d; /* A deep wine color */
+  color: #f5e6ca; /* A light cream color for contrast */
+  padding: 10px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* To separate logo, nav, and cart */
+}
+
+header .logo {
+  font-size: 1.5rem;
+  color: #f5e6ca;
+}
+
+header nav ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  display: flex;
+  align-items: center;
+  color: #f5e6ca;
+  text-decoration: none;
+}
+
+header nav ul li a:hover {
+  color: #a8a8a8; /* A lighter color on hover */
+}
+
+header .cart {
+  color: #f5e6ca;
+}

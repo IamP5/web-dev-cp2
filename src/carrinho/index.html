@@ -16,21 +16,21 @@
           <li><a href="/src/home">Vinhos</a></li>
           <li><a href="/src/lista-desejo">Lista de desejo</a></li>
           <li><a href="/src/contato">Contato</a></li>
-          <li>
-            <a id="nav-cart" href="/src/carrinho">
-              <img
-                width="40"
-                src="../assets/cart.svg"
-                alt="Carrinho de compras"
-              />
-            </a>
-          </li>
         </ul>
       </nav>
     </header>
     <main>
-      <h2>Vinhos</h2>
-      <ul class="vinhos" id="lista-vinhos"></ul>
+      <h2>Resumo da sua compra</h2>
+      <section id="cart"></section>
+      <section>
+        <div style="margin-top: 20px">
+          <button id="clear-cart" onclick="applyDiscount()">
+            Aplicar código de desconto
+          </button>
+          <input type="text" id="discount-code" />
+        </div>
+        <button id="checkout" onclick="checkout()">Finalizar compra</button>
+      </section>
     </main>
   </body>
 </html>

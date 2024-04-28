@@ -1,0 +1,75 @@
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8rem;
+  padding: 6rem 4rem;
+}
+
+#selected-wine {
+  display: flex;
+  justify-content: center;
+  max-width: 1280px;
+  gap: 2rem;
+}
+
+.wine-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+.wine-card__name {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.wine-card__type,
+.wine-card__price {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.wine-card__btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.wine-card__not-found {
+  color: red;
+  font-size: 20px;
+}
+
+#recipes {
+  max-width: 1280px;
+  display: flex;
+  gap: 20px;
+}
+
+.recipe-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.recipe-card__name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+.recipe-card__description {
+  font-size: 16px;
+  color: #666;
+}
+
+ul {
+  padding: 0;
+}
