@@ -1,5 +1,12 @@
 # web-dev-cp2
 
+**Integrantes:**
+
+- Bruno Dominicheli (554981)
+- Larissa Lapa (554517)
+- Nicole Bleinat (555359)
+- Stephany Marques (557351)
+
 ## Setup de extensões do VSCode
 
 - [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer)
